@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Page Theme Changer",
+  "version": "1.0.1",
+  "description": "Change page background/theme with per-site saving, dark mode and smart contrast.",
+  "action": {
+    "default_title": "Theme Changer",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons8-color-swatch-48.png",
+      "48": "icons8-color-swatch-48.png",
+      "128": "icons8-color-swatch-48.png"
+    }
+  },
+  "permissions": ["storage", "scripting", "activeTab", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons8-color-swatch-48.png",
+    "48": "icons8-color-swatch-48.png",
+    "128": "icons8-color-swatch-48.png"
+  }
+}

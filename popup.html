@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page Theme Changer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Theme Changer 🎨</h2>
+
+  <div class="row">
+    <label for="color">Pick color</label>
+    <input type="color" id="color" value="#ffefd5" />
+  </div>
+
+  <div class="swatches">
+    <button class="sw" data-color="#ffffff" title="White"></button>
+    <button class="sw" data-color="#f5f5f5" title="Soft Gray"></button>
+    <button class="sw" data-color="#fff3cd" title="Pale Yellow"></button>
+    <button class="sw" data-color="#e3f2fd" title="Soft Blue"></button>
+    <button class="sw" data-color="#fce4ec" title="Soft Pink"></button>
+    <button class="sw" data-color="#212121" title="Charcoal (for dark)"></button>
+  </div>
+
+
+  <h3> Custom Colour Picker</h3>
+  <input type="color" id="customColor">
+
+
+  <label class="chk">
+    <input type="checkbox" id="saveSite" />
+    Save for this site (auto-apply)
+  </label>
+
+  <div class="buttons">
+    <button id="applyBtn">Apply</button>
+    <button id="darkBtn">Toggle Dark Mode</button>
+    <button id="resetBtn" class="danger">Reset</button>
+  </div>
+
+  <p id="siteHint"></p>
+  <p class="muted" id="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

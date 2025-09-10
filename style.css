@@ -1,0 +1,102 @@
+* { box-sizing: border-box; }
+body {
+  width: 260px;
+  padding: 14px;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+label { font-size: 13px; color: #333; }
+input[type="color"] {
+  width: 44px; height: 32px; border: none; background: transparent; cursor: pointer;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin: 6px 0 10px;
+}
+.sw {
+  width: 28px; height: 24px; border: 1px solid #ccc; border-radius: 6px; cursor: pointer;
+}
+.sw[data-color="#ffffff"] { background: #ffffff; }
+.sw[data-color="#f5f5f5"] { background: #f5f5f5; }
+.sw[data-color="#fff3cd"] { background: #fff3cd; }
+.sw[data-color="#e3f2fd"] { background: #e3f2fd; }
+.sw[data-color="#fce4ec"] { background: #fce4ec; }
+.sw[data-color="#212121"] { background: #212121; }
+
+.chk { display: flex; align-items: center; gap: 8px; font-size: 13px; margin-bottom: 10px; }
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+#applyBtn, #darkBtn, #resetBtn {
+  padding: 8px 10px; border: none; border-radius: 8px; cursor: pointer;
+  font-weight: 600;
+}
+#applyBtn { background: #4caf50; color: #fff; }
+#darkBtn { background: #1976d2; color: #fff; }
+#resetBtn { background: #e53935; color: #fff; grid-column: span 2; }
+
+.muted { font-size: 12px; color: #666; margin-top: 8px; text-align: center; }
+#siteHint { font-size: 12px; color: #333; text-align: center; margin: 6px 0 0; }
+
+
+
+/* cutom */
+
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+h2, h3 { 
+  margin: 10px 0;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.color-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #ddd;
+  transition: background 0.3s;
+}
+
+.color-btn:hover {
+  background: #bbb;
+}
+
+#customColor {
+  width: 100%;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
